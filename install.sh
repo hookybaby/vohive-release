@@ -116,6 +116,7 @@ detect_arch() {
   case "$(uname -m)" in
     x86_64|amd64) echo "amd64" ;;
     aarch64|arm64) echo "arm64" ;;
+    armv7|armv7l) echo "armv7" ;;
     *)
       err "不支持的架构: $(uname -m)"
       exit 1
